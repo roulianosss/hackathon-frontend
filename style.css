@@ -11,3 +11,27 @@
   height: 100vh;
   width: 100vw;
 }
+
+#header {
+    color: #fff;
+    background-color: #1060f4;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer {
+    background-color: #ff0303;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 12;
+    grid-row-end: 13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
