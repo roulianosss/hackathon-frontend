@@ -103,15 +103,24 @@ input {
   padding: 5px 15px;
 }
 
-button {
+#btn-search {
   background-color: #47ad86;
   margin: 25px;
   padding: 10px 30px;
+  border-radius: 5px;
 
+}
+.btn-book {
+  background-color: #47ad86;
+  padding: 5px 5px;
+  border-radius: 5px;
 }
 
 #card-result {
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 #card-result img {
@@ -127,5 +136,19 @@ button {
 }
 
 #card-result p {
-  margin: 25px;
+  /* margin: 25px; */
+}
+
+.result-row {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #bcbcbc;
+  width: 95%;
+  height: 40px;
 }
