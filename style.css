@@ -10,28 +10,122 @@
   grid-template-rows: repeat(12, 1fr);
   height: 100vh;
   width: 100vw;
+  font-family: roboto;
 }
 
 #header {
-    color: #fff;
-    background-color: #1060f4;
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  /* background-color: #1060f4; */
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#footer {
-    background-color: #ff0303;
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 12;
-    grid-row-end: 13;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-  }
+#header a {
+  text-decoration: none;
+}
+
+#header h1 {
+  text-decoration: none;
+  color: #47ad86;
+  font-weight: bolder;
+  margin: 0 5px;
+  font-size: 1.5rem;
+}
+
+#menu-container {
+  display: flex;
+  color: black;
+}
+
+#menu-container a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: black;
+}
+
+
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  color: #f1f1f1;
+  background-color: #47ad86;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 13;
+}
+
+#content h2 {
+  margin: 15px 0;
+}
+
+#card-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  width: 250px;
+  height: 300px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+#date {
+  margin: 10px;
+  
+  
+}
+
+input {
+  padding: 5px 15px;
+}
+
+button {
+  background-color: #47ad86;
+  margin: 25px;
+  padding: 10px 30px;
+
+}
+
+#card-result {
+  color: black;
+}
+
+#card-result img {
+  margin-top: 30px;
+  height: 150px;
+  width: 150px;
+}
+
+#card-result hr {
+  height: 3px;
+  color: #47ad86;
+  background-color: #47ad86;
+}
+
+#card-result p {
+  margin: 25px;
+}
