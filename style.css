@@ -54,7 +54,7 @@
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  color: #f1f1f1;
+  color: #fefefe;
   background-color: #47ad86;
   background-image: url("./images/background.jpg");
   background-size: cover;
@@ -75,7 +75,7 @@
 
 .card {
   border-radius: 5px;
-  background-color: #f1f1f1;
+  background-color: #fefefe;
   width: 250px;
   height: 300px;
   margin: 30px;
@@ -83,6 +83,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 8px;
 }
 
 #input-container {
@@ -90,30 +91,57 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px;
+  margin: 20px 0;
+  width: 100%;
+
 }
 
 #date {
   margin: 10px;
-  
-  
 }
 
+
+
 input {
+  background-color: #eff2f1;
   padding: 5px 15px;
+  width: 80%;
+  border-radius: 4px;
+  outline: none;
+  border: none;
 }
+
+hr {
+  width: 79%;
+}
+/* 
+input:nth-child(1) {
+  border-bottom: 1px solid black;
+} */
 
 #btn-search {
   background-color: #47ad86;
   margin: 25px;
   padding: 10px 30px;
   border-radius: 5px;
-
+  color: #f1f1f1;
+  border: none;
+  width: 80%;
 }
+#btn-search:hover {
+  background-color: #367a60;
+}
+
 .btn-book {
   background-color: #47ad86;
   padding: 5px 5px;
   border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #000;
+  color: #f1f1f1;
+}
+.btn-book:hover {
+  background-color: #367a60;
 }
 
 #card-result {
@@ -121,6 +149,8 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 #card-result img {
@@ -135,12 +165,8 @@ input {
   background-color: #47ad86;
 }
 
-#card-result p {
-  /* margin: 25px; */
-}
-
 .result-row {
-  font-size: 0.9em;
+  font-size: 0.7em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -148,7 +174,8 @@ input {
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
-  background-color: #bcbcbc;
+  background-color: #f5eeee;
   width: 95%;
   height: 40px;
+  
 }
