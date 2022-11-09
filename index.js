@@ -16,13 +16,21 @@ function handleSearch(e) {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({
-            departure: departure.value,
-            arrival: arrival.value,
+            departure: departure.value.trim(),
+            arrival: arrival.value.trim(),
             date: date.value
         })
 	})
     .then(res => res.json())
     .then(filteredTrips => {
+        if (!filteredTrips.length){
+            cardResult.innerHTML = `
+                <img src="./images/notfound.png" alt="">
+                <hr>
+                <p>No trip found.</p>
+        `
+        return
+        }
         cardResult.innerHTML =''
         filteredTrips.forEach(trip =>{
             cardResult.innerHTML += `
