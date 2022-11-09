@@ -35,9 +35,11 @@
   font-weight: bolder;
   margin: 0 5px;
   font-size: 1.5rem;
+  margin-left: 25px;
 }
 
 #menu-container {
+  margin-right: 25px;
   display: flex;
   color: black;
 }

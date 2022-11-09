@@ -34,9 +34,11 @@
   font-weight: bolder;
   margin: 0 5px;
   font-size: 1.5rem;
+  margin-left: 25px;
 }
 
 #menu-container {
+  margin-right: 25px;
   display: flex;
   color: black;
 }
@@ -62,10 +64,16 @@
   grid-column-end: 13;
   grid-row-start: 2;
   grid-row-end: 13;
+  overflow: hidden;
 }
 
 #content h2 {
   margin: 15px 0;
+  font-size: 2.2em;
+}
+
+#content p {
+  font-size: 1.2em;
 }
 
 #card-container {
@@ -76,8 +84,8 @@
 .card {
   border-radius: 5px;
   background-color: #fefefe;
-  width: 250px;
-  height: 300px;
+  width: 350px;
+  height: 400px;
   margin: 30px;
   display: flex;
   flex-direction: column;
@@ -104,11 +112,12 @@
 
 input {
   background-color: #eff2f1;
-  padding: 5px 15px;
+  padding: 10px 20px;
   width: 80%;
   border-radius: 4px;
   outline: none;
   border: none;
+  font-size: 1.1em;
 }
 
 hr {
@@ -154,7 +163,7 @@ input:nth-child(1) {
 }
 
 #card-result img {
-  margin-top: 30px;
+  margin-top: 40px;
   height: 120px;
   width: 120px;
 }
@@ -163,7 +172,7 @@ input:nth-child(1) {
   height: 3px;
   color: #47ad86;
   background-color: #47ad86;
-  margin: 25px 0;
+  margin: 70px 0;
 }
 
 #card-result{
