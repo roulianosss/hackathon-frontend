@@ -19,6 +19,7 @@ function displayBooking() {
         let itemsList = document.createElement('div')
         itemsList.className = 'items-list'
         allBookingItem.forEach(item => {
+            console.log(new Date(item.date).getTime());
             console.log(item.price)
             total += item.price
             itemsList.innerHTML += `
@@ -26,7 +27,7 @@ function displayBooking() {
                     <p id='trip-info'>${item.departure} > ${item.arrival}</p>
                     <p>${item.date.split('T')[1].split(':').slice(0, -1).join(':')}</p>
                     <p>${item.price}€</p>
-                    <p>Departure in bientot</p>
+                    <p id='remaining-minutes'>Departure in ${Math.round((((new Date(item.date).getTime()/1000 - new Date().getTime()/1000)/60)-60)/60)} hours.</p>
                 </div> `
         })
         cardBooking.append(itemsList)

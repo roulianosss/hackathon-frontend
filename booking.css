@@ -64,7 +64,6 @@
   grid-row-end: 13;
 }
 
-
 #booking-card {
   padding-top: 15px;
   display: flex;
@@ -126,6 +125,10 @@
 }
 
 #trip-info {
+  width: 35%;
+}
+
+#remaining-minutes {
   width: 35%;
 }
 

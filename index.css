@@ -119,6 +119,9 @@ input {
   border: none;
   font-size: 1.1em;
 }
+input:placeholder-shown {
+  font-size: 1.em;
+}
 
 hr {
   width: 79%;

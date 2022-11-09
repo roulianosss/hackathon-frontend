@@ -16,7 +16,6 @@
 }
 
 #header {
-  /* background-color: #1060f4; */
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 1;
@@ -73,7 +72,6 @@
   justify-content: space-between;
   color: black;
   background-color: white;
-  /* padding: 50px 30px; */
   border-radius: 10px;
   width: 80vw;
   
@@ -126,8 +124,11 @@
   margin-left: 50px;
 }
 
+#cart-card > h2 {
+  margin-bottom: 10px;
+}
+
 .delete-btn {
-  /* padding: 10px; */
   height: 20px;
   width: 20px;
   background-color: #47ad86;

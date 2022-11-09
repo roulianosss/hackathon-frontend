@@ -35,7 +35,7 @@ function displayCart() {
                 <button id='purchase-btn'>Purchase</button>
             </div>`
         document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', handleRemove))
-        document.querySelectorAll('#purchase-btn').forEach(btn => btn.addEventListener('click', handlePurchase))
+        document.querySelectorAll('#purchase-btn').forEach(btn => btn.addEventListener('click', () => handlePurchase(allCartItem)))
 })
 }
 //////// fonction pour supprimer un element du panier
@@ -48,13 +48,14 @@ function handleRemove(e) {
     .then(() => displayCart())
 }
 /////// fonction pour valider le panier
-function handlePurchase(e) {
-    document.querySelectorAll('.item-row')
-    const allId = [...document.querySelectorAll('.item-row')].map(el => el.getAttribute('data-id'))
+function handlePurchase(allCartItem) {
     fetch(`http://localhost:3000/booking/add`).then(() => {
         displayCart()
         window.location.assign('./booking.html')
     })
+
+
+
     
 }
 displayCart()
