@@ -1,7 +1,9 @@
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 #global-container {
@@ -25,7 +27,7 @@
 }
 
 #header a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #header h1 {
@@ -46,8 +48,6 @@
   color: black;
 }
 
-
-
 #content {
   display: flex;
   flex-direction: column;
@@ -63,7 +63,36 @@
 }
 
 #cart-card {
-    color: black;
-    background-color: white;
-    padding: 50px 400px;
+  color: black;
+  background-color: white;
+  padding: 50px 400px;
+}
+
+/* custom scrolling
+*/
+/* 
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
 }
