@@ -10,7 +10,7 @@
   grid-template-rows: repeat(12, 1fr);
   height: 100vh;
   width: 100vw;
-  font-family: roboto;
+  font-family: 'Roboto', sans-serif;
 }
 
 #header {
@@ -133,11 +133,12 @@ input:nth-child(1) {
 }
 
 .btn-book {
+  font-size: 1em;
   background-color: #47ad86;
   padding: 5px 5px;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid #000;
+  border: none;
   color: #f1f1f1;
 }
 .btn-book:hover {
@@ -163,6 +164,7 @@ input:nth-child(1) {
   height: 3px;
   color: #47ad86;
   background-color: #47ad86;
+  margin: 25px 0;
 }
 
 .result-row {
@@ -177,5 +179,4 @@ input:nth-child(1) {
   background-color: #f5eeee;
   width: 95%;
   height: 40px;
-  
 }

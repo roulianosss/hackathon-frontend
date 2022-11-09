@@ -1,7 +1,9 @@
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 #global-container {
@@ -10,7 +12,7 @@
   grid-template-rows: repeat(12, 1fr);
   height: 100vh;
   width: 100vw;
-  font-family: roboto;
+  font-family: 'Roboto', sans-serif;
 }
 
 #header {
@@ -25,7 +27,7 @@
 }
 
 #header a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #header h1 {
@@ -46,15 +48,13 @@
   color: black;
 }
 
-
-
 #content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #f1f1f1;
-  background-color: #f1f1f1;
+  background-color: #eff2f1;
   background-size: cover;
   grid-column-start: 1;
   grid-column-end: 13;
@@ -62,8 +62,106 @@
   grid-row-end: 13;
 }
 
-#cart-card {
+
+#booking-card {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
     color: black;
     background-color: white;
-    padding: 50px 400px;
+    /* padding: 50px 30px; */
+    border-radius: 10px;
+    width: 80vw;
+    overflow: hidden;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  background-color: #f5eeee;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.footer-cart {
+  display: flex; 
+  width: 100%;
+  justify-content: space-between;
+  height: 50px;
+  background-color: black;
+  color: #f1f1f1;
+  margin-top: 25px;
+  align-items: center;
+}
+
+#purchase-btn {
+  margin-right: 50px;
+  background-color: #47ad86;
+  padding: 5px 10px;
+  color: #eff2f1;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#booking-card > h2 {
+  margin: 15px;
+}
+
+#trip-info {
+  width: 35%;
+}
+
+hr {
+  height: 3px;
+  color: #47ad86;
+  background-color: #47ad86;
+  margin: 25px 0;
+  width: 50%;
+}
+
+#slogan {
+  margin-bottom: 25px;
+  color: #47ad86;
+}
+
+
+/* custom scrolling
+*/
+/* 
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
 }

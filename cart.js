@@ -17,7 +17,7 @@ function displayCart() {
                 <div class='item-row' data-id='${item._id}'>
                     <p>${item.departure} > ${item.arrival}</p>
                     <p>${item.date.split('T')[1].split(':').slice(0, -1).join(':')}</p>
-                    <p>${item.price}</p>
+                    <p>${item.price}€</p>
                     <span class="delete-btn">✖</span>
                 </div> `
         })
@@ -44,7 +44,10 @@ function handleRemove(e) {
 function handlePurchase(e) {
     document.querySelectorAll('.item-row')
     const allId = [...document.querySelectorAll('.item-row')].map(el => el.getAttribute('data-id'))
-    fetch(`http://localhost:3000/booking/add`)
+    fetch(`http://localhost:3000/booking/add`).then(() => {
+        displayCart()
+        window.location.assign('./booking.html')
+    })
     
 }
 displayCart()
