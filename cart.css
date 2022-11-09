@@ -64,17 +64,22 @@
 
 
 #cart-card {
-  padding-top: 15px;
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-    color: black;
-    background-color: white;
-    /* padding: 50px 30px; */
-    border-radius: 10px;
-    width: 80vw;
-    overflow: hidden;
+  color: black;
+  background-color: white;
+  /* padding: 50px 30px; */
+  border-radius: 10px;
+  width: 80vw;
+  
+  overflow: hidden;
+}
+
+#last-p {
+  padding-bottom: 25px;
 }
 
 .items-list {
@@ -130,6 +135,10 @@
   border-radius: 4px;
   color: #f1f1f1;
   cursor: pointer;
+}
+
+.delete-btn p {
+  transform: translateY(-1px);
 }
 
 /* custom scrolling

@@ -6,7 +6,14 @@ function displayCart() {
     fetch('http://localhost:3000/cart')
     .then(res => res.json())
     .then(allCartItem => {
-        if (!allCartItem) return
+        if (!allCartItem.length) {
+            cartCard.innerHTML = `
+            <p>No tickets in your cart</p>
+            <br>
+            <p id='last-p'>Why not plan a trip?</p>
+            `
+            return
+        }
         cartCard.innerHTML = `<h2>My Cart</h2>` 
         let itemsList = document.createElement('div')
         itemsList.className = 'items-list'
@@ -18,13 +25,13 @@ function displayCart() {
                     <p>${item.departure} > ${item.arrival}</p>
                     <p>${item.date.split('T')[1].split(':').slice(0, -1).join(':')}</p>
                     <p>${item.price}€</p>
-                    <span class="delete-btn">✖</span>
+                    <div class="delete-btn"><p>✖</p></div>
                 </div> `
         })
         cartCard.append(itemsList)
         cartCard.innerHTML += `
             <div class='footer-cart'>
-                <p>Total: ${total}</p>
+                <p>Total: ${total}€</p>
                 <button id='purchase-btn'>Purchase</button>
             </div>`
         document.querySelectorAll('.delete-btn').forEach(btn => btn.addEventListener('click', handleRemove))
@@ -33,12 +40,12 @@ function displayCart() {
 }
 //////// fonction pour supprimer un element du panier
 function handleRemove(e) {
-    fetch(`http://localhost:3000/cart/delete/${this.parentNode.getAttribute('data-id')}`, {
+    fetch(`http://localhost:3000/cart/${this.parentNode.getAttribute('data-id')}`, {
         method: 'DELETE',
 		headers: { 'Content-Type': 'application/json' },
 	})
     .then(res => res.json())
-    .then(data => displayCart())
+    .then(() => displayCart())
 }
 /////// fonction pour valider le panier
 function handlePurchase(e) {

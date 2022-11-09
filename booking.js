@@ -4,7 +4,16 @@ function displayBooking() {
     fetch('http://localhost:3000/booking')
     .then(res => res.json())
     .then(allBookingItem => {
-        if (!allBookingItem.length) return
+        if (!allBookingItem.length) {
+            cardBooking.innerHTML = `
+                <div id="cart-card">
+                    <p>No tickets in your cart</p>
+                    <br>
+                    <p>Why not plan a trip?</p>
+                </div>
+            `
+            return
+        }
         console.log(allBookingItem)
         cardBooking.innerHTML = `<h2>My Booking</h2>` 
         let itemsList = document.createElement('div')
