@@ -39,8 +39,6 @@ function handleRemove(e) {
 	})
     .then(res => res.json())
     .then(data => displayCart())
-    
-    
 }
 /////// fonction pour valider le panier
 function handlePurchase(e) {
@@ -50,11 +48,3 @@ function handlePurchase(e) {
     
 }
 displayCart()
-// {
-    //     "_id": "636a5deb5537701feb45e2ab",
-    //     "departure": "Paris",
-    //     "arrival": "Marseille",
-    //     "date": "2022-11-08T11:00:15.780Z",
-    //     "price": 83,
-    //     "__v": 0
-    // }
